@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Function scope example</title>
+</head>
+<body>
+
+  <script>
+ 
+	let playerScore=0;
+	let computerScore=0;
+	let playerSelection;
+	let computerSelectionRandom;
+	let playerSelectionUpper;
+	
+	function game () {
+	for (let i=0; i<=4 ;i++){
+    playerSelection = prompt ('Please enter your choice , Rock, Paper or Scissors');
+    computerSelectionRandom =	computerPlay(Math.floor(Math.random() * Math.floor(3)));
+	playerSelectionUpper = playerSelection.toUpperCase();
+	alert(playRound(playerSelectionUpper, computerSelectionRandom));
+	//playRound(playerSelectionUpper, computerSelectionRandom);
+	
+   } }
+   
+	
+	
+	function computerPlay (m) {
+	let chois = ["ROCK","PAPER","SCISSORS"];
+	return chois[m];
+	}
+	
+	
+	function playRound(playerSelection,computerSelection) {
+		if(playerSelection == computerSelection )
+		{
+		return "Tied, please try again" ;
+		}
+		else if (playerSelection == "ROCK" && computerSelection == "PAPER" ){
+			
+			computerScore ++;
+		 return "You Lose! Paper beats Rock";
+		
+		}
+		else if( playerSelection == "PAPER" && computerSelection == "SCISSORS" ) {
+		
+		computerScore ++;
+		return "You Lose! SCISSORS beats PAPER" ;
+		}
+		else { playerScore ++ ;
+		
+		return `You Win ! ${playerSelection} beats ${computerSelection}`;}
+	
+	}
+	game();
+	
+	if ( playerScore == computerScore )
+	{
+	alert(`playerScore = ${playerScore} ,computerScore = ${computerScore} , Rematch`);
+	}
+	else if ( playerScore > computerScore )
+	{
+	alert(`playerScore = ${playerScore} ,computerScore = ${computerScore} , Player Winner`);
+	}
+	else { alert(`playerScore = ${playerScore} ,computerScore = ${computerScore} , Computer Winner`);}
+
+	
+	
+  </script>
+</body>
+</html>
