@@ -1,0 +1,90 @@
+html {
+  font-size: 10px;
+  background: url(image/8tcxHWh.jpeg) bottom center;
+  background-size: cover;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.key {
+  border: 0.4rem solid black;
+  border-radius: 3rem;
+  margin: 1rem;
+  padding: 1rem 0.5rem;
+  transition: all 0.07s ease;
+  width: 10rem;
+  background: rgba(0, 0, 0, 0.4);
+ 
+  
+}
+.key1 {
+  border: 0.4rem solid black;
+  border-radius: 3rem;
+  margin: 1rem;
+  padding: 1rem 0.5rem;
+  transition: all 0.07s ease;
+  height: 100px;
+    width: 100px;
+  background: rgba(0, 0, 0, 0.4);
+  margin-top: 2%;
+  
+  margin-left: 45%;
+  
+}
+.keys {
+  display: flex;
+  flex: 1;
+  min-height: 72vh;
+  align-items: flex-end;
+  justify-content: center;
+  
+  
+}
+
+.sound {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #ffc600;
+}
+kbd {
+    display: block;
+    font-size: 4rem;
+    margin-left: 40%;
+  }
+  img{
+      width: inherit;
+  }
+  .playerPoint{
+    border-radius: 50rem;
+    height: 75px;
+    width: 75px;
+    text-align: center;
+    margin: 2% 0 0 5%;
+    float: left;
+    border: palevioletred;
+    border-style: outset;
+    font-size: 14px;
+    font-weight: bold;
+    
+  }
+  .ComPoint{
+    border-radius: 50rem;
+    height: 75px;
+    width: 75px;
+    text-align: center;
+    float: right;
+    margin: 2% 5% 0 0;
+    border: palevioletred;
+    border-style: outset;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .playing {
+    transform: scale(1.1);
+    border-color: #ffc600;
+    box-shadow: 0 0 1rem #ffc600;}

@@ -2,71 +2,56 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Function scope example</title>
+  <title>Rock Vs Paper Vs Scissors</title>
+  <link rel="shortcut icon" href="image/favicon.ico">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+	<div >
+		<lable id="Score1"  class="playerPoint" > 
+     <br> palyer
+		</div>
+		<div >
+			<label id="Score2"  class="ComPoint"> 
+        <br>computer
+      </div>
+      <div   class="key1" data-key="">
+    
+        <img id ="ComImage" src="image/question.png" alt="rock" >
+        
+      </div>
+<div class="keys">
+	
+<div class="key" data-key="65">
+	<kbd>A</kbd>
+	<img src="image/rock.png" alt="rock" >
+	
+</div>
+<div class="key" data-key="83">
+	<kbd>S</kbd>
+	<img src="image/scissors.png" alt="scissors">
+	
+</div>
+<div class="key" data-key="68">
+	<kbd>D</kbd>
+	<img src="image/paper.png" alt="paper" >
+	
+</div>
 
-  <script>
- 
-	let playerScore=0;
-	let computerScore=0;
-	let playerSelection;
-	let computerSelectionRandom;
-	let playerSelectionUpper;
-	
-	function game () {
-	for (let i=0; i<=4 ;i++){
-    playerSelection = prompt ('Please enter your choice , Rock, Paper or Scissors');
-    computerSelectionRandom =	computerPlay(Math.floor(Math.random() * Math.floor(3)));
-	playerSelectionUpper = playerSelection.toUpperCase();
-	alert(playRound(playerSelectionUpper, computerSelectionRandom));
-	//playRound(playerSelectionUpper, computerSelectionRandom);
-	
-   } }
-   
-	
-	
-	function computerPlay (m) {
-	let chois = ["ROCK","PAPER","SCISSORS"];
-	return chois[m];
-	}
-	
-	
-	function playRound(playerSelection,computerSelection) {
-		if(playerSelection == computerSelection )
-		{
-		return "Tied, please try again" ;
-		}
-		else if (playerSelection == "ROCK" && computerSelection == "PAPER" ){
-			
-			computerScore ++;
-		 return "You Lose! Paper beats Rock";
-		
-		}
-		else if( playerSelection == "PAPER" && computerSelection == "SCISSORS" ) {
-		
-		computerScore ++;
-		return "You Lose! SCISSORS beats PAPER" ;
-		}
-		else { playerScore ++ ;
-		
-		return `You Win ! ${playerSelection} beats ${computerSelection}`;}
-	
-	}
-	game();
-	
-	if ( playerScore == computerScore )
-	{
-	alert(`playerScore = ${playerScore} ,computerScore = ${computerScore} , Rematch`);
-	}
-	else if ( playerScore > computerScore )
-	{
-	alert(`playerScore = ${playerScore} ,computerScore = ${computerScore} , Player Winner`);
-	}
-	else { alert(`playerScore = ${playerScore} ,computerScore = ${computerScore} , Computer Winner`);}
+</div>
 
-	
-	
+<audio data-key="65" src="sounds/clap.wav"></audio>
+  <audio data-key="83" src="sounds/hihat.wav"></audio>
+  <audio data-key="68" src="sounds/kick.wav"></audio>
+  <audio data-key="70" src="sounds/openhat.wav"></audio>
+  <audio data-key="71" src="sounds/boom.wav"></audio>
+  <audio data-key="72" src="sounds/ride.wav"></audio>
+  <audio data-key="74" src="sounds/snare.wav"></audio>
+  <audio data-key="75" src="sounds/tom.wav"></audio>
+  <audio data-key="76" src="sounds/tink.wav"></audio>
+  
+  <script type="text/javascript" src="main.js">
+
   </script>
 </body>
 </html>
